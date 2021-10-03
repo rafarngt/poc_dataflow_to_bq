@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "poc-datahack-ps-df-bq-01",
+  "private_key_id": "7ab2fee74d53ccef7693b96a2e30a57b4ae80a32",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDexH6UkLu3zWbK\n1d7Cb82+lGwIaGHWRQOvWoexJfhpDHEo2/cgm1O6kben3YCNMzavnTGgmbbWyIim\nb0RHLM9uY1U9Z0ucywkLqd6BPymNYnt5SOjkK53F8MJ/dUt81UCzPuq4A6bT365G\nJiHx0TYLHdPAqhldoy0BweX3vx1TH1NOSaSqFFjrfot+OdhaKUu+/e90RjrRTpAD\nw78Of3TsAeNUTYk8MSZASTepbV1wNxR0hthKqKJmOU0Y2Xz4KmqvGiFl48hQYSp1\nBCYLJrOuduNbnZgC5UOoqOJ4n2pD0gT8u4ASR0tH5xStGxbMwozVmFiKvr4FVG4F\nJOOH4KxxAgMBAAECggEAGOifvrzwQH0XIVcIsXUO7GBsNAR37B2La/ATfBtiy1w4\nyvjNiTfVBOeGQZ7i4Ob5FmndQrftWdbScMnAOLUp/I3e2h7StZV+TW+REaKeYtDA\nPa+JWvoFijyBgv76kdrGgURnumuuG8LHGdDpusBJ6rRLGR/r9ixou+mSbUFRZhnF\nK5o2Bvl/43EDpfgEWWN+o02Zy78sA6Mj/q+SozPm86nI504EgvaBsnKM4Sni1uwd\n5kjOI2JVTiDGWMcxthG851qPp94wrx868raFBH0juEjZAl9Sio/BA1Mm9XsjbJA1\nK3aoil3t0O1EokCpBY7hNW8yh5EYw9bW2ARqtWyYgQKBgQD0V5sS6ReA9TP2Cx4H\nex0UIv3orFhOm9GdE43g8yenCEKM24KQY5JAmfaXaf4uwpidFWP/PxmcpohmNeih\nrSVJKQzyYZs5T92OiJANkV6p0yrC0Kpxh8j+9ZizHOzs2jNDm54njRMA12tER+pA\n9wj7EH+O/GhZgYbYMk7phCmKcwKBgQDpZWBCV1y+W24b6cIF7DBEyWgXyCzQKceU\n+HhWLzyerGKr9BRXRllsmm+3CPrHzYQG8Dq6b5g4mOkzIRIG/KVyQQok3uit1ph/\nWWXaDCbGCLFAkezUh1PCWymJm1gwAhZPgR7h/JgOq+d/XS40o7O+VdnoD+M8qCYV\n3RADLEOAiwKBgAvAauTt8QNyx5z9y+PwN+XQCQY3w8eEFwDG//vhtfaCnzDHHfBz\n2YTh4spFfsQg99YWQUj1b/XozIad8SJVgYWTQ9wkdaK8BJvmVYdRhowEa/oSrx/m\nt/QLO9zhd0Os+uo1gdXFIzTXJ4GRM+ML/pKUqI3n9dzYLfQX91Oj15uhAoGBAOgz\n9crLA/hXGnsm2+PskjE9eBSBESShDHGHqqGEKXlr5FdTZJFX6kwEcjTV+Dqkm0AT\n7TnjILzeVNSLiFXvMeM0FhWMuE2LfPjmRlDjWggYSdEF3Wusn4Z0ECVZqilJSk0b\nF1Cab+XY3V53pCq223L4Eu2wMNH+MLX705x0g0v1AoGAAX3z+Ay6Sqk/Pji2euhH\ncaP8ChD5kifrfP4kZnGP3AcHuKDIXfbpV1Y+KJWFuk8s7NyjycLK7HUz6xHdg20Y\nBg3Gv3WprlgZJUQZdvXHKNU71Pg+YPMMd9fOBGA3QncAQExKM0RoCPaVqHB7F7fK\nJikNX+rNGQiQC7aU6TuRbJU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "custom-sa@poc-datahack-ps-df-bq-01.iam.gserviceaccount.com",
+  "client_id": "117094578109062869160",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/custom-sa%40poc-datahack-ps-df-bq-01.iam.gserviceaccount.com"
+}

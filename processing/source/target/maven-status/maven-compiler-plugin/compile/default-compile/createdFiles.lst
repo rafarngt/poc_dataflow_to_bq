@@ -1,0 +1,6 @@
+com/processing/dataflow/model/Sensors.class
+com/processing/dataflow/mainPipeline.class
+com/liverpool/stream/ingestion/fundacional/clientes/dataflow/process/ConstruirJsonResultante.class
+com/processing/dataflow/utils/CargaConfiguracionesPipeline.class
+com/processing/dataflow/process/ConvierteJsonAPojoSensorsProcess.class
+com/processing/dataflow/option/OptionsPipeline.class
