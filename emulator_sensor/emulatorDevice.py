@@ -41,7 +41,7 @@ def buid_msg():
     print(randonNumber())
     deviceRandom = "device_"+str(randonNumber())
     schema["sensorID"]=deviceRandom
-    schema["uniqueID"]=generaterandomHash(deviceRandom)
+    schema["uniqueID"]=generaterandomHash1()
     # schema["timecollected"]=round(datetime.timestamp(datetime.now()))
     schema["value"]=round(random.uniform(1,2), 2)
 
@@ -57,6 +57,10 @@ def generaterandomHash(str2hash):
     result = hashlib.md5(str2hash.encode())
     return result.hexdigest()
 
+
+def generaterandomHash1():
+    result = ["VXnExcdkUY7uMWTlPcYY","XCXplgiNNtt28ExdWxmo"]
+    return result[randrange(2)]
 if __name__=='__main__':
   
     
