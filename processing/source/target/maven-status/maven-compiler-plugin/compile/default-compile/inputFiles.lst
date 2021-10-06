@@ -1,6 +1,0 @@
-/Users/rafael.noriega/Documents/DataHack webinnar/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/process/ConvierteJsonAPojoSensorsProcess.java
-/Users/rafael.noriega/Documents/DataHack webinnar/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/process/ConstruirJsonResultante.java
-/Users/rafael.noriega/Documents/DataHack webinnar/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/model/Sensors.java
-/Users/rafael.noriega/Documents/DataHack webinnar/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/mainPipeline.java
-/Users/rafael.noriega/Documents/DataHack webinnar/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/utils/CargaConfiguracionesPipeline.java
-/Users/rafael.noriega/Documents/DataHack webinnar/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/option/OptionsPipeline.java
