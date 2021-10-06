@@ -82,7 +82,7 @@ public class mainPipeline {
 
 
 		enrichSensor.apply("Escribe en Bigquery", BigQueryIO.<Sensor>write()
-			.to(input -> getTableDestination(optionsPipeline.getProject(), "raw","sensors"))
+			.to(input -> getTableDestination("poc-datahack-ps-df-bq-01", "raw","sensors"))
 			.withFormatFunction((Sensor msg) -> convertJsonToTableRow(msg))
 			.withCreateDisposition(BigQueryIO.Write.CreateDisposition.CREATE_NEVER)
 			.withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND)
