@@ -34,6 +34,6 @@ hs_err_pid*
 
 .DS_Store
 
-processing/source/target/
-processing/.DS_Store
-processing/source/.DS_Store
+process/source/target/
+process/.DS_Store
+process/source/.DS_Store

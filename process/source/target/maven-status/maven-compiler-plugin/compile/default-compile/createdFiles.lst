@@ -1,0 +1,6 @@
+com/processing/dataflow/utils/LoadConfigurationsPipeline.class
+com/processing/dataflow/mainPipeline.class
+com/processing/dataflow/process/EnrichDataProcess.class
+com/processing/dataflow/model/Sensor.class
+com/processing/dataflow/process/ConvertJsonToSensorProcess.class
+com/processing/dataflow/option/OptionsPipeline.class
