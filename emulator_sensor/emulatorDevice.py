@@ -64,5 +64,5 @@ def generaterandomHash1():
 if __name__=='__main__':
   
     
-    for n in range(1, 10):
+    for n in range(1, 100):
         publish_messages('poc-datahack-ps-df-bq-01','pb-topic-raw',buid_msg())
