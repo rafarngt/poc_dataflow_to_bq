@@ -13,12 +13,12 @@ import org.slf4j.LoggerFactory;
 import com.processing.dataflow.option.OptionsPipeline;
 
 
-public class CargaConfiguracionesPipeline  {
-	private static final Logger LOG = LoggerFactory.getLogger(CargaConfiguracionesPipeline.class);
+public class LoadConfigurationsPipeline {
+	private static final Logger LOG = LoggerFactory.getLogger(LoadConfigurationsPipeline.class);
 	private String rutaArchivoConfiguraciones;
 	private OptionsPipeline options;
 
-	public CargaConfiguracionesPipeline(String rutaArchivoConfiguraciones) {
+	public LoadConfigurationsPipeline(String rutaArchivoConfiguraciones) {
 		LOG.info(rutaArchivoConfiguraciones);
 		this.rutaArchivoConfiguraciones = rutaArchivoConfiguraciones;
 	}
@@ -33,7 +33,6 @@ public class CargaConfiguracionesPipeline  {
 		//define pipeline options
 		 options = PipelineOptionsFactory.create().as(OptionsPipeline.class);
 
-		LOG.info("entre inicia");
 			try
 			{
 				LOG.info("Inicia Carga de Configuraciones");

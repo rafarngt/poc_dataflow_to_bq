@@ -12,7 +12,7 @@ import org.apache.beam.sdk.schemas.JavaBeanSchema;
 import org.apache.beam.sdk.schemas.annotations.DefaultSchema;
 
 @DefaultSchema(JavaBeanSchema.class)
-public class Sensors implements Cloneable  {
+public class Sensor implements Cloneable  {
 
 	@JsonProperty("sensorID")
     @Nullable private String sensorID;
@@ -27,7 +27,7 @@ public class Sensors implements Cloneable  {
 	@JsonProperty("deviceType")
 	@Nullable private String deveceType;
     
-	public Sensors() {}
+	public Sensor() {}
 
 
 	@Nullable
@@ -84,7 +84,7 @@ public class Sensors implements Cloneable  {
 		this.deveceType = deveceType;
 	}
 
-	public Sensors(@Nullable String sensorID, @Nullable String uniqueID, @Nullable DateTime timecollected, @Nullable Double value, @Nullable String deviceName, @Nullable String deveceType) {
+	public Sensor(@Nullable String sensorID, @Nullable String uniqueID, @Nullable DateTime timecollected, @Nullable Double value, @Nullable String deviceName, @Nullable String deveceType) {
 		this.sensorID = sensorID;
 		this.uniqueID = uniqueID;
 		this.timecollected = timecollected;
@@ -95,7 +95,7 @@ public class Sensors implements Cloneable  {
 
 	@Override
 	public String toString() {
-		return "Sensors{" +
+		return "Sensor{" +
 				"sensorID='" + sensorID + '\'' +
 				", uniqueID='" + uniqueID + '\'' +
 				", timecollected=" + timecollected +
@@ -103,6 +103,24 @@ public class Sensors implements Cloneable  {
 				", deviceName='" + deviceName + '\'' +
 				", deveceType='" + deveceType + '\'' +
 				'}';
+	}
+
+	@Override
+	public Object clone() {
+
+		try {
+			return (Sensor)super.clone();
+		} catch (Exception e) {
+			// either handle the exception or throw it
+			return new Sensor(
+					this.sensorID,
+					this.uniqueID,
+					this.timecollected,
+					this.value,
+					this.deviceName,
+					this.deveceType
+			);
+		}
 	}
 
 
