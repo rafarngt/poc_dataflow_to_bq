@@ -1,0 +1,26 @@
+[
+	{
+		"name": "sensorID",
+		"type": "STRING"
+	},
+	{
+		"name": "uniqueID",
+		"type": "STRING"
+	},
+	{
+		"name": "timecollected",
+		"type": "DATETIME"
+	},
+	{
+		"name": "value",
+		"type": "FLOAT"
+	},
+	{
+		"name": "deviceName",
+		"type": "STRING"
+	},
+	{
+		"name": "deviceType",
+		"type": "STRING"
+	}
+]
