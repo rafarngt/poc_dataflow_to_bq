@@ -3,13 +3,11 @@ package com.processing.dataflow.model;
 import java.util.ArrayList;
 
 import javax.annotation.Nullable;
-import java.time.Instant;
-import java.time.LocalDateTime;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.api.client.util.DateTime;
+
 import org.apache.beam.sdk.schemas.JavaBeanSchema;
 import org.apache.beam.sdk.schemas.annotations.DefaultSchema;
+import org.joda.time.DateTime;
 
 @DefaultSchema(JavaBeanSchema.class)
 public class Sensor implements Cloneable  {
@@ -19,7 +17,7 @@ public class Sensor implements Cloneable  {
 	@JsonProperty("uniqueID")
     @Nullable private String uniqueID;
 	@JsonProperty("timecollected")
-    @Nullable private DateTime timecollected;
+    @Nullable private String timecollected;
 	@JsonProperty("value")
     @Nullable private Double value;
 	@JsonProperty("deviceName")
@@ -49,11 +47,11 @@ public class Sensor implements Cloneable  {
 	}
 
 	@Nullable
-	public DateTime getTimecollected() {
+	public String getTimecollected() {
 		return timecollected;
 	}
 
-	public void setTimecollected(@Nullable DateTime timecollected) {
+	public void setTimecollected(@Nullable String timecollected) {
 		this.timecollected = timecollected;
 	}
 
@@ -84,7 +82,7 @@ public class Sensor implements Cloneable  {
 		this.deveceType = deveceType;
 	}
 
-	public Sensor(@Nullable String sensorID, @Nullable String uniqueID, @Nullable DateTime timecollected, @Nullable Double value, @Nullable String deviceName, @Nullable String deveceType) {
+	public Sensor(@Nullable String sensorID, @Nullable String uniqueID, @Nullable String timecollected, @Nullable Double value, @Nullable String deviceName, @Nullable String deveceType) {
 		this.sensorID = sensorID;
 		this.uniqueID = uniqueID;
 		this.timecollected = timecollected;

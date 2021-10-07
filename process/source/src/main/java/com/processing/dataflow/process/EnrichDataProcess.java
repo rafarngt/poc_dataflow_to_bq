@@ -1,6 +1,6 @@
 package com.processing.dataflow.process;
 
-import avro.shaded.com.google.common.collect.Maps;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.client.util.DateTime;
@@ -14,16 +14,13 @@ import com.google.firebase.FirebaseOptions;
 import com.google.firebase.cloud.FirestoreClient;
 import com.processing.dataflow.model.Sensor;
 import org.apache.beam.sdk.transforms.DoFn;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.sql.Timestamp;
-import java.time.Instant;
-import java.util.Date;
+
+
 
 public class EnrichDataProcess extends DoFn<Sensor, Sensor>  {
 
@@ -62,8 +59,7 @@ public class EnrichDataProcess extends DoFn<Sensor, Sensor>  {
 			// future.get() blocks on response
 			DocumentSnapshot document = future.get();
 			if (document.exists()) {
-				LOG.info("Document data: " + document.getData());
-				LOG.info((String) document.getData().get("deviceName"));
+				LOG.info("Document data: {} " , document.getData());
 				copySensor.setDeviceName((String) document.getData().get("deviceName"));
 				copySensor.setDeveceType((String) document.getData().get("deviceType"));
 
@@ -95,10 +91,16 @@ public class EnrichDataProcess extends DoFn<Sensor, Sensor>  {
 					.setCredentials(credentials)
 					.setProjectId(projectId)
 					.build();
-			FirebaseApp.initializeApp(options);
+			LOG.info("FirebaseApp {}", FirebaseApp.getApps());
+			if(FirebaseApp.getApps().isEmpty()){
+				FirebaseApp.initializeApp(options);
+			}else{
+				FirebaseApp.getApps();
+			}
 
-			Firestore db = FirestoreClient.getFirestore();
-			return db;
+
+			return FirestoreClient.getFirestore();
+
 
 	}
 	

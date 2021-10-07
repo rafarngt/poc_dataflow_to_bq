@@ -1,9 +1,10 @@
 import argparse
 import json
-from datetime import datetime
+import datetime
 import random
 import hashlib
 from random import randrange
+
 
 def publish_messages(project_id, topic_name, data):
     """Publishes multiple messages to a Pub/Sub topic."""
@@ -32,26 +33,24 @@ def buid_msg():
     schema = {
         "sensorID":"",
         "uniqueID":"",
-        "timecollected":None,
+        "timecollected":"",
         "value":"",
         "deviceName":"",
         "deviceType":"",
     }
-
-    print(randonNumber())
+    now = datetime.datetime.now()
+    time_string = now.strftime("%Y-%m-%d %H:%M:%S")
     deviceRandom = "device_"+str(randonNumber())
     schema["sensorID"]=deviceRandom
     schema["uniqueID"]=generaterandomHash1()
-    # schema["timecollected"]=round(datetime.timestamp(datetime.now()))
+    schema['timecollected']= time_string
     schema["value"]=round(random.uniform(1,2), 2)
 
-   
-    result = json.dumps(schema)
     
-    return json.dumps(schema).encode("utf-8")
+    return json.dumps(schema,default = myconverter ).encode("utf-8")
 def randonNumber():
     
-    return randrange(10)
+    return randrange(2)
 
 def generaterandomHash(str2hash):
     result = hashlib.md5(str2hash.encode())
@@ -61,8 +60,13 @@ def generaterandomHash(str2hash):
 def generaterandomHash1():
     result = ["VXnExcdkUY7uMWTlPcYY","XCXplgiNNtt28ExdWxmo"]
     return result[randrange(2)]
+
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
+
 if __name__=='__main__':
   
     
-    for n in range(1, 100):
+    for n in range(0, 100):
         publish_messages('poc-datahack-ps-df-bq-01','pb-topic-raw',buid_msg())

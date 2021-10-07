@@ -1,6 +1,6 @@
-/Users/rafael.noriega/Documents/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/mainPipeline.java
-/Users/rafael.noriega/Documents/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/process/ConvertJsonToSensorProcess.java
-/Users/rafael.noriega/Documents/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/utils/LoadConfigurationsPipeline.java
-/Users/rafael.noriega/Documents/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/model/Sensor.java
-/Users/rafael.noriega/Documents/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/option/OptionsPipeline.java
-/Users/rafael.noriega/Documents/poc_dataflow_to_bq/processing/source/src/main/java/com/processing/dataflow/process/EnrichDataProcess.java
+/Users/rafael.noriega/Documents/poc_dataflow_to_bq/process/source/src/main/java/com/processing/dataflow/utils/LoadConfigurationsPipeline.java
+/Users/rafael.noriega/Documents/poc_dataflow_to_bq/process/source/src/main/java/com/processing/dataflow/process/ConvertJsonToSensorProcess.java
+/Users/rafael.noriega/Documents/poc_dataflow_to_bq/process/source/src/main/java/com/processing/dataflow/mainPipeline.java
+/Users/rafael.noriega/Documents/poc_dataflow_to_bq/process/source/src/main/java/com/processing/dataflow/process/EnrichDataProcess.java
+/Users/rafael.noriega/Documents/poc_dataflow_to_bq/process/source/src/main/java/com/processing/dataflow/option/OptionsPipeline.java
+/Users/rafael.noriega/Documents/poc_dataflow_to_bq/process/source/src/main/java/com/processing/dataflow/model/Sensor.java

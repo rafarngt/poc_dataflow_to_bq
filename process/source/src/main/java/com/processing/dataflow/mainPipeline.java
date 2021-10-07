@@ -5,6 +5,11 @@ package com.processing.dataflow;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.api.services.bigquery.model.TableRow;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.firestore.Firestore;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.cloud.FirestoreClient;
 import com.processing.dataflow.option.OptionsPipeline;
 import com.processing.dataflow.process.*;
 import com.processing.dataflow.model.Sensor;
@@ -64,6 +69,8 @@ public class mainPipeline {
 	public void doDataProcessing(Pipeline pipeline)
 	{
 
+
+
 		PCollection<PubsubMessage> mensajePubSub = pipeline
 				  .apply("Escucha Mensajes PubSub",
 						  PubsubIO.readMessagesWithAttributes().fromSubscription((optionsPipeline.getNombreSuscripcion())));
@@ -114,9 +121,11 @@ public class mainPipeline {
 	}
 
 	static TableDestination getTableDestination(String project, String dataset, String table){
+
 		return new TableDestination(String.format("%s:%s.%s", project, dataset, table), null);
 
 	}
+
 
 
 

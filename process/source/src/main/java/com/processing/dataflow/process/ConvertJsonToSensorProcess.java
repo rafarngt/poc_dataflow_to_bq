@@ -1,7 +1,22 @@
 package com.processing.dataflow.process;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.TimeZone;
+
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.processing.dataflow.model.Sensor;
 import org.apache.beam.sdk.io.gcp.pubsub.PubsubMessage;
 import org.apache.beam.sdk.transforms.DoFn;
@@ -10,7 +25,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 
 public class ConvertJsonToSensorProcess extends DoFn<PubsubMessage, Sensor>  {
 
@@ -22,7 +36,11 @@ public class ConvertJsonToSensorProcess extends DoFn<PubsubMessage, Sensor>  {
 	@Setup
     public void init() {
 		mapper = new ObjectMapper();
-		mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
+		 DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 df.setTimeZone(TimeZone.getTimeZone("UTC"));
+		 mapper.setDateFormat(df);
+		 mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
+
 
 		
     }
